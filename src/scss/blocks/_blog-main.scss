@@ -1,0 +1,47 @@
+.blog-main {
+	margin-top: 160px;
+
+	&__title {
+	}
+
+	&__blog {
+	}
+}
+.blog {
+	margin-top: 64px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 32px;
+
+	&__item {
+		max-width: 406px;
+		color: $color-white;
+	}
+
+	&__body {
+		background-color: #1f1d21;
+		padding: 32px;
+	}
+
+	&__date {
+		color: $color-gray;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	&__title {
+		margin-top: 8px;
+		font-family: $font-playfair-display;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 48px;
+	}
+
+	&__text {
+		margin-top: 16px;
+	}
+
+	&__img {
+	}
+}

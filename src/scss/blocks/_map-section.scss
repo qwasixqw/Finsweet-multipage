@@ -1,0 +1,40 @@
+.map-section {
+	margin-top: 160px;
+
+	&__wrapper {
+		color: $color-white;
+		display: grid;
+		grid-template-columns: 441px 1fr;
+		align-items: center;
+		background-color: #1f1d21;
+	}
+
+	&__item {
+	}
+
+	&__body {
+		margin-left: 64px;
+	}
+
+	&__block {
+		max-width: 200px;
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__title {
+		font-family: $font-playfair-display;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 30px;
+	}
+
+	&__descr {
+		margin-top: 6px;
+		color: $color-gray;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 28px;
+	}
+}

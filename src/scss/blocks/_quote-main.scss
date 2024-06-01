@@ -1,0 +1,92 @@
+.quote-main {
+	background-color: #1f1d21;
+	margin-top: 160px;
+
+	&__wrapper {
+		color: $color-white;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+
+	&__item {
+	}
+
+	&__item-body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__body {
+		max-width: 460px;
+	}
+
+	&__quote {
+		font-size: 72px;
+		font-weight: 400;
+		line-height: 92px;
+	}
+
+	&__text {
+		font-family: $font-playfair-display;
+		font-size: 32px;
+		font-weight: 500;
+		line-height: 48px;
+	}
+
+	&__down {
+		margin-top: 68px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__block {
+	}
+
+	&__name {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+	}
+
+	&__position {
+		margin-top: 4px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 16px;
+		color: $color-gray;
+	}
+
+	&__icon {
+		border-radius: 100%;
+	}
+
+	&__line {
+		margin-top: 22px;
+		width: 100%;
+		height: 1px;
+		background-color: $color-gray;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -3px;
+			right: 0;
+			width: 52px;
+			height: 3px;
+			background-color: $color-white;
+		}
+	}
+
+	&__background {
+		height: 668px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

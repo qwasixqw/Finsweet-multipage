@@ -1,0 +1,58 @@
+.tabs-menu {
+	margin-top: 144px;
+
+	&__card {
+		margin-top: 64px;
+	}
+
+	&__wrap {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 32px;
+	}
+
+	&__item {
+	}
+
+	&__image {
+	}
+
+	&__info {
+		padding: 24px 32px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #1f1d21;
+	}
+
+	&__name {
+		color: $color-white;
+		font-family: $font-playfair-display;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 30px;
+	}
+
+	&__price {
+		color: $color-white;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 32px;
+	}
+}
+.filter {
+	color: $color-gray;
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+	}
+
+	&__item {
+		font-family: $font-playfair-display;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 30px;
+		cursor: pointer;
+	}
+}

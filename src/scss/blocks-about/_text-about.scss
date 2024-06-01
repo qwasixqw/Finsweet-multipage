@@ -1,0 +1,23 @@
+.text-about {
+	margin-top: 160px;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&__item {
+	}
+
+	&__title {
+		font-family: $font-playfair-display;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 48px;
+		color: $color-white;
+	}
+
+	&__text {
+		margin-top: 24px;
+	}
+}

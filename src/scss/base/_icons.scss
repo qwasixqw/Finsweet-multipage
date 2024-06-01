@@ -1,0 +1,29 @@
+.icons-wrapper {
+	padding: 30px 0;
+	display: flex;
+	column-gap: 30px;
+}
+
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 24px;
+	height: 24px;
+}
+
+.icon--facebook {
+	fill: white;
+}
+.icon--twitter {
+	fill: white;
+}
+.icon--instagram {
+	fill: white;
+}
+.icon--linkedIn {
+	fill: white;
+}
+.icon--serving-tort {
+	fill: orange;
+	stroke: orange;
+}

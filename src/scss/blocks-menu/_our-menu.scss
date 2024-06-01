@@ -1,0 +1,29 @@
+.our-menu {
+	margin-top: 96px;
+	&__suptitle {
+	}
+
+	&__about {
+	}
+
+	&__line {
+	}
+
+	&__row {
+		margin-top: 10px;
+		display: grid;
+		grid-template-columns: 424px 500px;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 80px;
+		height: 100%;
+	}
+
+	&__title {
+		flex: 1 0 643px;
+	}
+
+	&__text {
+	
+	}
+}

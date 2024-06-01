@@ -1,0 +1,59 @@
+.header {
+	padding: 30px 0;
+	&__row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-right: 50px;
+	}
+
+	&__nav {
+	}
+
+	&__clone {
+		margin-left: auto;
+		display: flex;
+		gap: 12px;
+		span {
+			color: $color-bisque;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+		}
+	}
+}
+.nav {
+	display: flex;
+	gap: 40px;
+	&__item {
+	}
+
+	&__link {
+		color: $color-white;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		text-transform: capitalize;
+		transition: all 0.2s ease;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 1px;
+			background-color: $color-bisque;
+			transition: all 0.2s ease;
+		}
+
+		@include any-hover {
+			&:hover::before {
+				width: 100%;
+			}
+		}
+	}
+}
