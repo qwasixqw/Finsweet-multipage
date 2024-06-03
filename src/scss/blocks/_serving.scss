@@ -1,5 +1,5 @@
 .serving {
-	margin-top: 160px;
+	margin-top: $margin-big;
 	&__suptitle {
 	}
 
@@ -14,11 +14,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 58px;
+		gap: clamp(1.75rem, 1.068rem + 3.41vw, 3.625rem);
+
+		@include tablet {
+			flex-direction: column;
+		}
 	}
 
 	&__title {
 		flex: 1 0 660px;
+
+		@include tablet-wide {
+			flex: 1 1 auto;
+		}
 	}
 
 	&__text {
@@ -36,20 +44,44 @@
 	justify-items: center;
 	gap: 3px;
 
+	@include tablet {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media only screen and (max-width: 545px) {
+		grid-template-columns: 1fr;
+	}
+
 	&__item {
-		padding: 65px 64.5px 63.5px 63.5px;
+		padding: clamp(1.5rem, 0.591rem + 4.55vw, 4rem);
 		display: flex;
 		flex-direction: column;
 		background: rgba(0, 0, 0, 0.16);
 		cursor: pointer;
+		transition: background-color 0.2s ease;
+		height: 100%;
 
-		
+		&:hover {
+			background-color: rgb(138, 108, 54);
+
+			.card {
+				&__title {
+					color: black;
+				}
+
+				&__text {
+					color: black;	
+				}
+			}
+		}
 	}
 
 	&__img {
 	}
 
 	&__title {
+		flex-grow: 1;
+		transition: color 0.2s ease;
 		margin-top: 24px;
 		font-family: $font-playfair-display;
 		font-size: 32px;
@@ -58,6 +90,8 @@
 	}
 
 	&__text {
+		flex-grow: 1;
+		transition: color 0.2s ease;
 		margin-top: 12px;
 		color: $color-gray;
 		font-size: 16px;

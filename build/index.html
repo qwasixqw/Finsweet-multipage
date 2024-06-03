@@ -7,6 +7,7 @@
 		<title>Finsweet</title>
 		<link rel="shortcut icon" href="./img/favicons/coffee.png" type="image/x-icon" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<script defer src="./js/index.bundle.js"></script>
 	</head>
 
 	<body>
@@ -14,9 +15,9 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__row">
-						<div class="header__logo">
+						<a href="index.html" class="header__logo">
 							<img src="./img/section-header/Logo.svg" alt="logo" />
-						</div>
+						</a>
 						<div class="header__nav nav">
 							<div class="nav__item">
 								<a href="index.html" class="nav__link">Home</a>
@@ -41,13 +42,19 @@
 							<span>Clone Project</span>
 							<img src="./img/section-header/Arrow-header.svg" alt="arrow" />
 						</div>
+						<div class="menu-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</header>
+			<a href="#" class="scroll-to-top" id="scrollToTop">
+				⇧
+			</a>
+
 			<main class="main">
-				<page class="page">
-					<div class="container"></div>
-				</page>
 				<section class="page">
 					<div class="container">
 						<div class="page__wrapper">
@@ -58,7 +65,7 @@
 									can move the text.
 								</div>
 								<div class="page__btn button-bisque">
-									<a href="#!" class="page__link">
+									<a href="menu.html" class="page__link">
 										<span>View Menu</span>
 										<img src="./img/home-page-main/Arrow-black-rigth.svg" alt="arrow" />
 									</a>
@@ -78,7 +85,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="page__item">
+							<div class="page__item page__item-bg">
 								<picture>
 									<source srcset="./img/home-page-main/main-coffee.webp 1x, ./img/home-page-main/main-coffee@2x.webp 2x" type="image/webp" />
 									<source srcset="./img/home-page-main/main-coffee.jpeg 1x, ./img/home-page-main/main-coffee@2x.jpeg 2x" type="image/jpeg" />
@@ -104,40 +111,40 @@
 									Edit this text to&#160;make it&#160;your&#160;own. To&#160;edit, simply click directly on&#160;the text to&#160;start adding your own words. You
 									can move the text by&#160;dragging and dropping the text anywhere on the page.
 								</div>
-								<div class="know-more__column column">
-									<div class="column__item">
-										<div class="column__head">
+								<div class="know-more__column column-more">
+									<div class="column-more__item">
+										<div class="column-more__head">
 											<img src="./img/know-more-main/Icon-more.svg" alt="Icon" />
 											<span>10+ People</span>
 										</div>
-										<div class="column__subtitle text">We&#160;are Small Team</div>
-										<div class="column__text text">
+										<div class="column-more__subtitle text">We&#160;are Small Team</div>
+										<div class="column-more__text text">
 											Through True Rich Attended does no&#160;end it&#160;his mother since favourable.
 										</div>
 									</div>
-									<div class="column__item">
-										<div class="column__head">
+									<div class="column-more__item">
+										<div class="column-more__head">
 											<img src="./img/know-more-main/Icon-more.svg" alt="Icon" />
 											<span>2014</span>
 										</div>
-										<div class="column__subtitle text">We&#160;are From</div>
-										<div class="column__text text">
+										<div class="column-more__subtitle text">We&#160;are From</div>
+										<div class="column-more__text text">
 											Through True Rich Attended does no&#160;end it&#160;his mother since favourable.
 										</div>
 									</div>
-									<div class="column__item">
-										<div class="column__head">
+									<div class="column-more__item">
+										<div class="column-more__head">
 											<img src="./img/know-more-main/Icon-more.svg" alt="Icon" />
 											<span>200k</span>
 										</div>
-										<div class="column__subtitle text">We&#160;Served</div>
-										<div class="column__text text">
+										<div class="column-more__subtitle text">We&#160;Served</div>
+										<div class="column-more__text text">
 											Through True Rich Attended does no&#160;end it&#160;his mother since favourable.
 										</div>
 									</div>
 								</div>
 								<div class="know-more__btn button-bisque">
-									<a href="#!" class="know-more__link">
+									<a href="menu.html" class="know-more__link">
 										<span>View Menu</span>
 										<img src="./img/home-page-main/Arrow-black-rigth.svg" alt="arrow" />
 									</a>
@@ -339,7 +346,7 @@
 						</div>
 						<div class="menu-main__button">
 							<div class="menu-main__btn button-bisque">
-								<a href="#!" class="menu-main__link">
+								<a href="menu.html" class="menu-main__link">
 									<span>View Menu</span>
 									<img src="./img/home-page-main/Arrow-black-rigth.svg" alt="arrow" />
 								</a>
@@ -393,52 +400,122 @@
 					<div class="container">
 						<h2 class="blog-main__title title">Read Our Lastest Blog</h2>
 						<div class="blog-main__blog blog">
-							<div class="blog__item">
-								<div class="blog__body">
-									<div class="blog__date">21 Jun 2021</div>
-									<h3 class="blog__title">Extra Thick Homemad Pizza Sauce</h3>
-									<div class="blog__text text">
-										It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content of&#160;a&#160;page.
+							<div class="swiper swiper-blog">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide swiper-slide__blog">
+										<div class="blog__item">
+											<div class="blog__body">
+												<div class="blog__date">21 Jun 2021</div>
+												<h3 class="blog__title">Extra Thick Homemad Pizza Sauce</h3>
+												<div class="blog__text text">
+													It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content
+													of&#160;a&#160;page.
+												</div>
+											</div>
+											<div class="blog__img">
+												<picture>
+													<source srcset="./img/blog-main-section/blog-main-1.webp 1x, ./img/blog-main-section/blog-main-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/blog-main-section/blog-main-1.jpeg 1x, ./img/blog-main-section/blog-main-1@2x.jpeg 2x" type="image/jpeg" />
+													<img src="./img/blog-main-section/blog-main-1.jpeg" alt="blog" />
+												</picture>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="blog__img">
-									<picture>
-										<source srcset="./img/blog-main-section/blog-main-1.webp 1x, ./img/blog-main-section/blog-main-1@2x.webp 2x" type="image/webp" />
-										<source srcset="./img/blog-main-section/blog-main-1.jpeg 1x, ./img/blog-main-section/blog-main-1@2x.jpeg 2x" type="image/jpeg" />
-										<img src="./img/blog-main-section/blog-main-1.jpeg" alt="blog" />
-									</picture>
-								</div>
-							</div>
-							<div class="blog__item">
-								<div class="blog__body">
-									<div class="blog__date">21 Jun 2021</div>
-									<h3 class="blog__title">The Best Way to&#160;Store Fresh Herbs</h3>
-									<div class="blog__text text">
-										It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content of&#160;a&#160;page.
+									<div class="swiper-slide swiper-slide__blog">
+										<div class="blog__item">
+											<div class="blog__body">
+												<div class="blog__date">21 Jun 2021</div>
+												<h3 class="blog__title">The Best Way to&#160;Store Fresh Herbs</h3>
+												<div class="blog__text text">
+													It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content
+													of&#160;a&#160;page.
+												</div>
+											</div>
+											<div class="blog__img">
+												<picture>
+													<source srcset="./img/blog-main-section/blog-main-2.webp 1x, ./img/blog-main-section/blog-main-2@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/blog-main-section/blog-main-2.jpeg 1x, ./img/blog-main-section/blog-main-2@2x.jpeg 2x" type="image/jpeg" />
+													<img src="./img/blog-main-section/blog-main-2.jpeg" alt="blog" />
+												</picture>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="blog__img">
-									<picture>
-										<source srcset="./img/blog-main-section/blog-main-2.webp 1x, ./img/blog-main-section/blog-main-2@2x.webp 2x" type="image/webp" />
-										<source srcset="./img/blog-main-section/blog-main-2.jpeg 1x, ./img/blog-main-section/blog-main-2@2x.jpeg 2x" type="image/jpeg" />
-										<img src="./img/blog-main-section/blog-main-2.jpeg" alt="blog" />
-									</picture>
-								</div>
-							</div>
-							<div class="blog__item">
-								<div class="blog__body">
-									<div class="blog__date">21 Jun 2021</div>
-									<h3 class="blog__title">5 ways to&#160;prepare porridge</h3>
-									<div class="blog__text text">
-										It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content of&#160;a&#160;page.
+									<div class="swiper-slide swiper-slide__blog">
+										<div class="blog__item">
+											<div class="blog__body">
+												<div class="blog__date">21 Jun 2021</div>
+												<h3 class="blog__title">5 ways to&#160;prepare porridge</h3>
+												<div class="blog__text text">
+													It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content
+													of&#160;a&#160;page.
+												</div>
+											</div>
+											<div class="blog__img">
+												<picture>
+													<source srcset="./img/blog-main-section/blog-main-3.webp 1x, ./img/blog-main-section/blog-main-3@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/blog-main-section/blog-main-3.jpeg 1x, ./img/blog-main-section/blog-main-3@2x.jpeg 2x" type="image/jpeg" />
+													<img src="./img/blog-main-section/blog-main-3.jpeg" alt="blog" />
+												</picture>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="blog__img">
-									<picture>
-										<source srcset="./img/blog-main-section/blog-main-3.webp 1x, ./img/blog-main-section/blog-main-3@2x.webp 2x" type="image/webp" />
-										<source srcset="./img/blog-main-section/blog-main-3.jpeg 1x, ./img/blog-main-section/blog-main-3@2x.jpeg 2x" type="image/jpeg" />
-										<img src="./img/blog-main-section/blog-main-3.jpeg" alt="blog" />
-									</picture>
+									<div class="swiper-slide swiper-slide__blog">
+										<div class="blog__item">
+											<div class="blog__body">
+												<div class="blog__date">21 Jun 2021</div>
+												<h3 class="blog__title">Extra Thick Homemad Pizza Sauce</h3>
+												<div class="blog__text text">
+													It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content
+													of&#160;a&#160;page.
+												</div>
+											</div>
+											<div class="blog__img">
+												<picture>
+													<source srcset="./img/blog-main-section/blog-main-2.webp 1x, ./img/blog-main-section/blog-main-2@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/blog-main-section/blog-main-2.jpeg 1x, ./img/blog-main-section/blog-main-2@2x.jpeg 2x" type="image/jpeg" />
+													<img src="./img/blog-main-section/blog-main-2.jpeg" alt="blog" />
+												</picture>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide swiper-slide__blog">
+										<div class="blog__item">
+											<div class="blog__body">
+												<div class="blog__date">21 Jun 2021</div>
+												<h3 class="blog__title">The Best Way to&#160;Store Fresh Herbs</h3>
+												<div class="blog__text text">
+													It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content
+													of&#160;a&#160;page.
+												</div>
+											</div>
+											<div class="blog__img">
+												<picture>
+													<source srcset="./img/blog-main-section/blog-main-1.webp 1x, ./img/blog-main-section/blog-main-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/blog-main-section/blog-main-1.jpeg 1x, ./img/blog-main-section/blog-main-1@2x.jpeg 2x" type="image/jpeg" />
+													<img src="./img/blog-main-section/blog-main-1.jpeg" alt="blog" />
+												</picture>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide swiper-slide__blog">
+										<div class="blog__item">
+											<div class="blog__body">
+												<div class="blog__date">21 Jun 2021</div>
+												<h3 class="blog__title">5 ways to&#160;prepare porridge</h3>
+												<div class="blog__text text">
+													It&#160;is&#160;a&#160;long established fact that a&#160;reader will be&#160;distracted by&#160;the readable content
+													of&#160;a&#160;page.
+												</div>
+											</div>
+											<div class="blog__img">
+												<picture>
+													<source srcset="./img/blog-main-section/blog-main-3.webp 1x, ./img/blog-main-section/blog-main-3@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/blog-main-section/blog-main-3.jpeg 1x, ./img/blog-main-section/blog-main-3@2x.jpeg 2x" type="image/jpeg" />
+													<img src="./img/blog-main-section/blog-main-3.jpeg" alt="blog" />
+												</picture>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -470,12 +547,14 @@
 									</div>
 								</div>
 							</div>
-							<div class="map-section__item">
-								<picture>
-									<source srcset="./img/map-section/Map.webp 1x, ./img/map-section/Map@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/map-section/Map.jpeg 1x, ./img/map-section/Map@2x.jpeg 2x" type="image/jpeg" />
-									<img src="./img/map-section/Map.jpeg" alt="map" />
-								</picture>
+							<div class="map-section__item map-section__item-map">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96675.46293475248!2d-73.93196257329463!3d40.78163500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28aacd707041d%3A0x389f228bd03eb67!2s127%20St%2F20%20Av!5e0!3m2!1sru!2sru!4v1717442940615!5m2!1sru!2sru"
+									style="border:0;"
+									allowfullscreen=""
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade"
+								></iframe>
 							</div>
 						</div>
 					</div>
@@ -489,22 +568,22 @@
 						</div>
 						<div class="footer-up__nav">
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Home</a>
+								<a href="index.html" class="footer-up__link">Home</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Menu</a>
+								<a href="menu.html" class="footer-up__link">Menu</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">About us</a>
+								<a href="about.html" class="footer-up__link">About us</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Our story</a>
+								<a href="story.html" class="footer-up__link">Our story</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Blog</a>
+								<a href="blog.html" class="footer-up__link">Blog</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Contact us</a>
+								<a href="contact.html" class="footer-up__link">Contact us</a>
 							</div>
 						</div>
 					</div>
@@ -545,7 +624,5 @@
 				</div>
 			</footer>
 		</div>
-
-		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

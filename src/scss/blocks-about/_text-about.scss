@@ -1,9 +1,14 @@
 .text-about {
-	margin-top: 160px;
+	margin-top: $margin-big;
 
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+
+		@media only screen and (max-width: 600px) {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
 	}
 
 	&__item {
@@ -15,6 +20,10 @@
 		font-weight: 700;
 		line-height: 48px;
 		color: $color-white;
+
+		@media only screen and (max-width: 600px) {
+			font-size: 26px;
+		}
 	}
 
 	&__text {

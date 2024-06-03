@@ -2,10 +2,14 @@
 	display: none !important;
 }
 
+.lock {
+	overflow: hidden;
+}
+
 .title {
 	font-family: $font-playfair-display;
 	color: $color-white;
-	font-size: 48px;
+	font-size: clamp(2.25rem, 1.977rem + 1.36vw, 3rem);
 	font-weight: 700;
 	line-height: 58px;
 }

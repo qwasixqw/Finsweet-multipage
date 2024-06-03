@@ -4,7 +4,7 @@
 	}
 }
 
-@mixin tablet() {
+@mixin tablet-wide() {
 	@media (max-width: 1220px) {
 		@content;
 	}
@@ -16,14 +16,20 @@
 	}
 }
 
-@mixin mobile() {
-	@media (max-width: 820px) {
+@mixin laptop-small() {
+	@media (max-width: 910px) {
 		@content;
 	}
 }
 
 @mixin tablet() {
 	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mobile() {
+	@media (max-width: 425px) {
 		@content;
 	}
 }

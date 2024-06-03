@@ -3,6 +3,10 @@
 		background: rgba(255, 255, 255, 0.03);
 		color: $color-white;
 		padding: 80px;
+
+		@include laptop {
+			padding: 40px;
+		}
 	}
 
 	&__title {
@@ -15,14 +19,25 @@
 	&__line {
 		margin-top: 69px;
 		border: 1px dashed rgba(255, 255, 255, 0.15);
+
+		@include laptop {
+			display: none;
+		}
 	}
 
 	&__row {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		align-items: center;
 		gap: 43px;
 		margin-top: 32px;
+
+		@include laptop {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media only screen and (max-width: 530px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
@@ -36,6 +51,10 @@
 			top: -36px;
 			left: 0;
 			background-color: $color-bisque;
+
+			@include laptop {
+				display: none;
+			}
 		}
 	}
 
@@ -43,6 +62,10 @@
 		font-size: 32px;
 		font-weight: 600;
 		line-height: 44px;
+
+		@include laptop {
+			color: $color-bisque;
+		}
 	}
 
 	&__suptitle {

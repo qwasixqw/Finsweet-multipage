@@ -48,7 +48,7 @@ const plumberNotify = (title) => {
 gulp.task('html:dev', function () {
 	return gulp
 		.src([
-			'./src/html/**/*.html',
+			'./src/html/**/**/*.html',
 			'!./**/blocks/**/*.*',
 			'!./src/html/docs/**/*.*',
 		])

@@ -1,25 +1,33 @@
 .quote-main {
 	background-color: #1f1d21;
-	margin-top: 160px;
+	margin-top: $margin-big;
 
 	&__wrapper {
 		color: $color-white;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
 	}
 
 	&__item {
 	}
 
 	&__item-body {
+		padding: 20px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 
 	&__body {
-		max-width: 460px;
+		@include tablet {
+			max-width: none;
+		}
 	}
 
 	&__quote {
@@ -30,7 +38,7 @@
 
 	&__text {
 		font-family: $font-playfair-display;
-		font-size: 32px;
+		font-size: clamp(1.625rem, 1.489rem + 0.68vw, 2rem);
 		font-weight: 500;
 		line-height: 48px;
 	}

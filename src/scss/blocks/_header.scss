@@ -1,8 +1,17 @@
 .header {
 	padding: 30px 0;
+
+	@include laptop {
+		padding: 30px 0 0 0;
+	}
+
 	&__row {
 		display: flex;
 		align-items: center;
+
+		@include laptop-small {
+			justify-content: space-between;
+		}
 	}
 
 	&__logo {
@@ -16,6 +25,11 @@
 		margin-left: auto;
 		display: flex;
 		gap: 12px;
+
+		@include laptop-small {
+			display: none;
+		}
+
 		span {
 			color: $color-bisque;
 			font-size: 16px;
@@ -27,6 +41,34 @@
 .nav {
 	display: flex;
 	gap: 40px;
+
+	@include laptop-small {
+		position: fixed; 
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		background: #333;
+		overflow-y: auto;
+		transform: translateX(100%); 
+		transition:
+			transform 0.3s ease,
+			opacity 0.3s ease; 
+		opacity: 0; 
+		z-index: 1000; 
+
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		transition: all 0.25s ease;
+		z-index: 1000;
+
+		&.active {
+			transform: translateX(0); 
+			opacity: 1;
+		}
+	}
+
 	&__item {
 	}
 
@@ -55,5 +97,76 @@
 				width: 100%;
 			}
 		}
+
+		@include laptop-small {
+			font-size: clamp(2.25rem, 1.911rem + 1.69vw, 2.875rem);
+			line-height: 54px;
+		}
 	}
+}
+
+.menu-icon {
+	display: none;
+	height: 22px;
+	width: 30px;
+	position: relative;
+	cursor: pointer;
+	z-index: 1001;
+
+	@include laptop-small {
+		display: block;
+	}
+
+	span {
+		transition: all 0.3s ease 0s;
+		top: calc(50% - 1px);
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		&:first-child {
+			top: 0;
+		}
+		&:last-child {
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	&.active {
+		span {
+			transform: scale(0);
+			&:first-child {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&:last-child {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+
+.scroll-to-top {
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	font-size: 26px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: none;
+	z-index: 1000;
+	transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+	background-color: #555;
 }

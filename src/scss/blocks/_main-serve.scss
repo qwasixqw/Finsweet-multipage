@@ -1,17 +1,34 @@
 .page {
-	margin-top: 96px;
+	margin-top: clamp(2.875rem, 1.739rem + 5.68vw, 6rem);
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		column-gap: 30px;
 		justify-items: center;
+
+		@include laptop-small {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
 	}
 
+	&__item-bg {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include laptop-small {
+			margin-top: 40px;
+		}
+	}
+
 	&__item-info {
+		
 	}
 
 	&__title {

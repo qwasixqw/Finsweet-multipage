@@ -1,5 +1,5 @@
 .our-menu {
-	margin-top: 96px;
+	margin-top: clamp(2.25rem, -0.817rem + 8.92vw, 5.875rem);
 	&__suptitle {
 	}
 
@@ -12,18 +12,22 @@
 	&__row {
 		margin-top: 10px;
 		display: grid;
-		grid-template-columns: 424px 500px;
+		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		justify-content: space-between;
 		column-gap: 80px;
 		height: 100%;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
 	}
 
 	&__title {
-		flex: 1 0 643px;
+	
 	}
 
-	&__text {
-	
+	&__text { 
 	}
 }

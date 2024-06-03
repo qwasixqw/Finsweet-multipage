@@ -1,5 +1,5 @@
 .know-more {
-	margin-top: 160px;
+	margin-top: $margin-big;
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -7,6 +7,11 @@
 		column-gap: 30px;
 		justify-items: center;
 		height: 100%;
+
+		@media only screen and (max-width: 856px) {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
 	}
 
 	&__item {
@@ -53,28 +58,62 @@
 	&__item-background {
 		display: flex;
 		gap: 67px;
-		min-height: 595px;
+		min-height: 395px;
+		height: 100%;
+
+		@include tablet {
+			justify-content: center;
+		}
+
+		@media only screen and (max-width: 600px) {
+			gap: 20px;
+		}
 	}
 
 	&__bg {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
 		&:first-child {
 			align-self: flex-end;
 		}
 		&:last-child {
 			align-self: flex-start;
 		}
+
+		@include laptop {
+			&:first-child {
+				align-self: stretch;
+			}
+			&:last-child {
+				align-self: stretch;
+			}
+		}
 	}
 }
-.column {
+.column-more {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+
+	@media only screen and (max-width: 600px) {
+		grid-template-columns: 1fr;
+	}
+
 	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__head {
 		display: flex;
 		align-items: flex-end;
 		gap: 9px;
+
 		span {
 			font-size: 24px;
 			font-weight: 500;
@@ -94,5 +133,6 @@
 
 	&__text {
 		margin-top: 15px;
+		flex-grow: 1;
 	}
 }

@@ -1,5 +1,5 @@
 .main-story {
-	margin-top: 160px;
+	margin-top: $margin-big;
 
 	&__wrapper {
 		min-height: 748px;
@@ -8,6 +8,10 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 60px;
+
+		@media only screen and (max-width: 630px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
@@ -27,15 +31,33 @@
 		display: flex;
 		gap: 64px;
 		min-height: 540px;
-	}
 
-	&__img {
+		@include laptop {
+			gap: 20px;
+		}
+	}
 		
+	&__img {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
 		&:first-child {
 			align-self: flex-end;
 		}
 		&:last-child {
 			align-self: flex-start;
+		}
+
+		@include laptop {
+			&:first-child {
+				align-self: stretch;
+			}
+			&:last-child {
+				align-self: stretch;
+			}
 		}
 	}
 

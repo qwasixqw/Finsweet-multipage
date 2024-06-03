@@ -7,6 +7,7 @@
 		<title>about</title>
 		<link rel="shortcut icon" href="./img/favicons/burger.png" type="image/x-icon" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<script defer src="./js/index.bundle.js"></script>
 	</head>
 
 	<body>
@@ -14,9 +15,9 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__row">
-						<div class="header__logo">
+						<a href="index.html" class="header__logo">
 							<img src="./img/section-header/Logo.svg" alt="logo" />
-						</div>
+						</a>
 						<div class="header__nav nav">
 							<div class="nav__item">
 								<a href="index.html" class="nav__link">Home</a>
@@ -41,9 +42,18 @@
 							<span>Clone Project</span>
 							<img src="./img/section-header/Arrow-header.svg" alt="arrow" />
 						</div>
+						<div class="menu-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</header>
+			<a href="#" class="scroll-to-top" id="scrollToTop">
+				⇧
+			</a>
+
 			<main class="main">
 				<section class="more-about">
 					<div class="container">
@@ -134,7 +144,7 @@
 					</div>
 				</section>
 
-				<section class="history-about">
+				<section class="history-about ">
 					<div class="container">
 						<div class="history-about__wrapper">
 							<h2 class="history-about__title">
@@ -222,12 +232,14 @@
 									</div>
 								</div>
 							</div>
-							<div class="map-section__item">
-								<picture>
-									<source srcset="./img/map-section/Map.webp 1x, ./img/map-section/Map@2x.webp 2x" type="image/webp" />
-									<source srcset="./img/map-section/Map.jpeg 1x, ./img/map-section/Map@2x.jpeg 2x" type="image/jpeg" />
-									<img src="./img/map-section/Map.jpeg" alt="map" />
-								</picture>
+							<div class="map-section__item map-section__item-map">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96675.46293475248!2d-73.93196257329463!3d40.78163500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28aacd707041d%3A0x389f228bd03eb67!2s127%20St%2F20%20Av!5e0!3m2!1sru!2sru!4v1717442940615!5m2!1sru!2sru"
+									style="border:0;"
+									allowfullscreen=""
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade"
+								></iframe>
 							</div>
 						</div>
 					</div>
@@ -241,22 +253,22 @@
 						</div>
 						<div class="footer-up__nav">
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Home</a>
+								<a href="index.html" class="footer-up__link">Home</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Menu</a>
+								<a href="menu.html" class="footer-up__link">Menu</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">About us</a>
+								<a href="about.html" class="footer-up__link">About us</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Our story</a>
+								<a href="story.html" class="footer-up__link">Our story</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Blog</a>
+								<a href="blog.html" class="footer-up__link">Blog</a>
 							</div>
 							<div class="footer-up__item">
-								<a href="#!" class="footer-up__link">Contact us</a>
+								<a href="contact.html" class="footer-up__link">Contact us</a>
 							</div>
 						</div>
 					</div>
@@ -297,7 +309,5 @@
 				</div>
 			</footer>
 		</div>
-
-		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

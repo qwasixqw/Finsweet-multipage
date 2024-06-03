@@ -1,5 +1,5 @@
 .footer {
-	margin-top: 160px;
+	margin-top: $margin-big;
 
 	&__line {
 		margin-top: 32px;
@@ -21,6 +21,10 @@
 		align-items: center;
 		justify-content: center;
 		gap: 40px;
+
+		@media only screen and (max-width: 678px) {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
@@ -50,6 +54,10 @@
 				width: 100%;
 			}
 		}
+
+		@media only screen and (max-width: 678px) {
+			font-size: 36px;
+		}
 	}
 }
 .footer-down {
@@ -58,6 +66,11 @@
 	&__row {
 		display: flex;
 		align-items: center;
+
+		@media only screen and (max-width: 678px) {
+			flex-direction: column;
+			gap: 40px;
+		}
 	}
 
 	&__license {
@@ -65,12 +78,23 @@
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 24px;
+
+		@media only screen and (max-width: 678px) {
+			text-align: center;
+			font-size: 26px;
+		}
 	}
 
 	&__social {
-		margin-left: 284px;
+		margin-left: clamp(2.25rem, -18.417rem + 41.33vw, 17.75rem);
 		display: flex;
 		gap: 24px;
+
+		@media only screen and (max-width: 678px) {
+			text-align: center;
+			font-size: 26px;
+			margin: auto;
+		}
 	}
 
 	&__icon {
@@ -85,5 +109,9 @@
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 24px;
+
+		@media only screen and (max-width: 678px) {
+			margin: auto;
+		}
 	}
 }

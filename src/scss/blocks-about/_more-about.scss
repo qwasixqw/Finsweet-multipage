@@ -1,5 +1,6 @@
 .more-about {
-	margin-top: 160px;
+	margin-top: $margin-big;
+
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -7,9 +8,13 @@
 		justify-items: center;
 		min-height: 595px;
 		height: 100%;
+
+		@include laptop {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
 	}
 
-	
 	&__item {
 	}
 
@@ -58,6 +63,10 @@
 		column-gap: 67px;
 		justify-items: center;
 		height: 100%;
+
+		@media only screen and (max-width: 600px) {
+			gap: 20px;
+		}
 	}
 
 	&__bg {
@@ -67,11 +76,29 @@
 		&:last-child {
 			align-self: flex-start;
 		}
+
+		@include laptop {
+			&:first-child {
+				align-self: stretch;
+			}
+			&:last-child {
+				align-self: stretch;
+			}
+		}
 	}
 }
 .column {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+
+	@include laptop {
+		gap: 20px;
+	}
+
+	@media screen and (max-width: 620px) {
+		grid-template-columns: 1fr;
+	}
+
 	&__item {
 	}
 
