@@ -11,6 +11,13 @@
 	</head>
 
 	<body>
+		<div id="preloader">
+			<picture>
+				<source srcset="./img/gif-loader/spinner.webp 1x, ./img/gif-loader/spinner@2x.webp 2x" type="image/webp" />
+				<source srcset="./img/gif-loader/spinner.gif 1x, ./img/gif-loader/spinner@2x.gif 2x" type="image/gif" />
+				<img src="./img/gif-loader/spinner.gif" alt="gif" />
+			</picture>
+		</div>
 		<div class="wrapper">
 			<header class="header">
 				<div class="container">
@@ -383,13 +390,12 @@
 									<div class="quote-main__line"></div>
 								</div>
 							</div>
-							<div class="quote-main__item">
-								<div class="quote-main__background">
-									<picture>
-										<source srcset="./img/quote-main-section/bg-page-quote.webp 1x, ./img/quote-main-section/bg-page-quote@2x.webp 2x" type="image/webp" />
-										<source srcset="./img/quote-main-section/bg-page-quote.png 1x, ./img/quote-main-section/bg-page-quote@2x.png 2x" type="image/png" />
-										<img src="./img/quote-main-section/bg-page-quote.png" alt="quote" />
-									</picture>
+							<div class="quote-main__item quote-main__item-video">
+								<video id="video-quote" poster="../../../img/quote-main-section/bg-page-quote.png" width="925" height="668" muted loop>
+									<source src="./img/quote-main-section/video-quote.mp4" type="video/mp4" />
+								</video>
+								<div class="quote-main__play-button" id="play-button">
+									<img src="./img/quote-main-section/Play.svg" alt="play" />
 								</div>
 							</div>
 						</div>

@@ -6,6 +6,8 @@ import 'swiper/css/bundle';
 import { toggleBurgerMenu } from '../js/modules/burger.js';
 import { initTabsMenu } from '../js/modules/tabs-menu.js';
 import { initScrollToTop } from '../js/modules/scroll-top.js';
+import { initPreloader } from '../js/modules/preloader.js';
+import { initVideoPlayer } from '../js/modules/video.js'
 
 // selectors
 const menuIcon = document.querySelector('.menu-icon');
@@ -20,6 +22,12 @@ initTabsMenu('.filter__item', '.tabs-menu__card');
 
 // init scroll
 initScrollToTop();
+
+// init preloader
+initPreloader()
+
+// init video
+initVideoPlayer('video-quote', 'play-button');
 
 // swiper
 const swiper = new Swiper('.swiper-blog', {
@@ -36,8 +44,4 @@ const swiper = new Swiper('.swiper-blog', {
 			spaceBetween: 32,
 		},
 	},
-
-	// autoplay: {
-	// 	delay: 5000,
-	// },
 });

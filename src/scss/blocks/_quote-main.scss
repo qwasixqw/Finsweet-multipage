@@ -89,12 +89,31 @@
 		}
 	}
 
-	&__background {
-		height: 668px;
-		img {
+	&__item-video {
+		position: relative;
+		width: 100%;
+		max-width: 925px;
+		height: 100%;
+		aspect-ratio: 925 / 668;
+		background-color: black;
+		overflow: hidden;
+
+		video {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			display: block;
 		}
+
+		@include mobile {
+			height: 400px;
+		}
+	}
+
+	&__play-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 100;
 	}
 }
