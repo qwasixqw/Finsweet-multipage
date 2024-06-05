@@ -7,7 +7,7 @@ import { toggleBurgerMenu } from '../js/modules/burger.js';
 import { initTabsMenu } from '../js/modules/tabs-menu.js';
 import { initScrollToTop } from '../js/modules/scroll-top.js';
 import { initPreloader } from '../js/modules/preloader.js';
-import { initVideoPlayer } from '../js/modules/video.js'
+import { initVideoPlayer } from '../js/modules/video.js';
 
 // selectors
 const menuIcon = document.querySelector('.menu-icon');
@@ -24,7 +24,7 @@ initTabsMenu('.filter__item', '.tabs-menu__card');
 initScrollToTop();
 
 // init preloader
-initPreloader()
+initPreloader();
 
 // init video
 initVideoPlayer('video-quote', 'play-button');
@@ -43,5 +43,9 @@ const swiper = new Swiper('.swiper-blog', {
 			slidesPerView: 3,
 			spaceBetween: 32,
 		},
+	},
+
+	autoplay: {
+		delay: 2000,
 	},
 });
